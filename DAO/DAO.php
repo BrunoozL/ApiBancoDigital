@@ -1,5 +1,5 @@
 <?php
-namespace App\DAO;
+namespace ApiBancoDigital\DAO;
 
 use Exception;
 use PDO;
