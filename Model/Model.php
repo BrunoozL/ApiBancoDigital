@@ -1,5 +1,5 @@
 <?php
-namespace App\Model;
+namespace ApiBancoDigital\Model;
 
 abstract class Model
 {    

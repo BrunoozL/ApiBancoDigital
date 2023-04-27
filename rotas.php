@@ -1,6 +1,6 @@
 <?php
 
-    use App\Controller\;
+    use ApiBancoDigital\Controller\ChavePixController;
 
     $url = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
