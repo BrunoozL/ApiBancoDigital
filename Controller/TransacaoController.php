@@ -1,14 +1,13 @@
 <?php
 
-    namespace App\Controller;
+    namespace ApiBancoDigital\Controller;
 
-    use App\DAO\/*ExemploDAO*/;
-    use App\Model\{/*ExemploModel*/, /*ExemploModel*/, /*ExemploModel*/};
+    use ApiBancoDigital\Model\TransacaoModel;
     use Exception;
 
     include 'Controller.php';
 
-    class /*ExemploController*/ extends Controller
+    class TransacaoController extends Controller
     {
     }
 ?>
