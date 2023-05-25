@@ -6,6 +6,13 @@
 
     abstract class Controller
     {
+        protected static function LogError(Exception $e)
+        {
+            $f = fopen("erros.txt", "w");
+            fwrite($f, $e->getTraceAsString());
+        }
+
+
         protected static function GetResponseAsJSON($data)
         {
             header("Access-Control-Allow-Origin: *");

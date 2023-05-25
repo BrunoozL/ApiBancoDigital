@@ -5,22 +5,15 @@ use ApiBancoDigital\DAO\CorrenteDAO;
 
 class CorrenteModel extends Model
 {
-    public $id, $nome, $cpf, $senha, $data_nasc;
+    public $id, $email, $nome, $cpf, $senha, $data_nasc;
     
-    public function save()
+    public function save() : ?CorrenteModel
     {
-        if($this->id == null)
-            (new CorrenteModel())->insert($this);
-        else
-            (new CorrenteModel())->update($this);
+        return (new CorrenteModel())->save($this);     
     }
 
-    public function getAllRows()
-    {
-        $this->rows = (new CorrenteModel())->select();
-    }
-    public function delete()
-    {
-        (new CorrenteModel())->delete($this->id);
+    public function getByCpfAndSenha($cpf, $senha) : CorrenteModel
+    {      
+        return (new CorrenteModel())->selectByCpfAndSenha($cpf, $senha);
     }
 }
