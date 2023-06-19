@@ -24,7 +24,7 @@
             exit(json_encode($data));
         }
 
-        protected static function GetExcepitionAsJSON(Exception $e)
+        protected static function GetExceptionAsJSON(Exception $e)
         {
             $exception = [
                 'message' => $e->getMessage(),

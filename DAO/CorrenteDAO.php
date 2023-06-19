@@ -22,8 +22,10 @@ class CorrenteDAO extends DAO
 
     private function insert(CorrenteModel $model)
     {
-        $sql = "INSERT INTO Corrente(nome, email, cpf, data_nasc, senha) 
-                VALUES (?, ?, ?, ?, sha1(?) )";
+        
+
+        $sql = "INSERT INTO corrente (nome, email, cpf, data_nasc, senha, data_cadastro) 
+                VALUES (?, ?, ?, ?, sha1(?) ,?)";
 
         $stmt = $this->conexao->prepare($sql);
 
@@ -32,8 +34,10 @@ class CorrenteDAO extends DAO
         $stmt->bindValue(3, $model->cpf);
         $stmt->bindValue(4, $model->data_nasc);
         $stmt->bindValue(5, $model->senha);
+        $stmt->bindValue(6, $model->data_cadastro);
 
         $stmt->execute();
+
 
         $model->id = $this->conexao->lastInsertId();
 

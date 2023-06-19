@@ -1,15 +1,13 @@
 <?php
 
-    namespace ApiBancoDigital\Controller;
+namespace ApiBancoDigital\Controller;
 
-    use ApiBancoDigital\Model\CorrenteModel;
-    use Exception;
+use ApiBancoDigital\Model\CorrenteModel;
+use Exception;
 
-    include 'Controller.php';
-
-    class CorrenteController extends Controller
-    {
-        public static function login()
+class CorrenteController extends Controller
+{
+    public static function login()
     {
         try
         {
@@ -28,26 +26,30 @@
         }  
     }
 
-    /**
-     * Preenche um Model para que seja enviado ao banco de dados para salvar.
-     */
+/**
+ * Preenche um Model para que seja enviado ao banco de dados para salvar.
+ */
     public static function salvar()
     {
         try
         {
             $data = json_decode(file_get_contents('php://input'));
 
+            
+
             $model = new CorrenteModel();
-
             // Copiando os valores de $data para $model
-            foreach (get_object_vars($data) as $key => $value) 
-            {
-                $prop_letra_minuscula = strtolower($key);
+            $model->id = $data->id;
+            $model->email = $data->email;
+            $model->nome = $data->nome;
+            $model->cpf = $data->cpf;
+            $model->senha = $data->senha;
+            $model->data_nasc = $data->data_nasc;
+            $model->data_cadastro = $data->data_cadastro;
 
-                $model->$prop_letra_minuscula = $value;
-            }
+            
 
-            parent::setResponseAsJSON($model->save()); 
+            parent::GetResponseAsJSON($model->save()); 
 
         } catch(Exception $e) {
             
@@ -55,5 +57,5 @@
             parent::GetExceptionAsJSON($e);
         }   
     }
-    }
+}
 ?>

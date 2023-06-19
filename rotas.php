@@ -1,12 +1,14 @@
 <?php
 
     use ApiBancoDigital\Controller\ChavePixController;
+    use ApiBancoDigital\Controller\CorrenteController;
 
     $url = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
     switch ($url)
     {
-        case '/correntista/save':
+        case '/correntista/salvar':
+            CorrenteController::salvar();
         break;
 
         case '/conta/extrato':
@@ -19,6 +21,7 @@
         break;
 
         case '/correntista/entrar':
+            CorrenteController::login();
         break;
 
         default:
