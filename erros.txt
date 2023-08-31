@@ -1,8 +1,7 @@
-#0 C:\Users\Usuario\Desktop\Api\ApiBancoDigital\DAO\CorrenteDAO.php(39): PDOStatement->execute()
-#1 C:\Users\Usuario\Desktop\Api\ApiBancoDigital\DAO\CorrenteDAO.php(18): ApiBancoDigital\DAO\CorrenteDAO->insert(Object(ApiBancoDigital\Model\CorrenteModel))
-#2 C:\Users\Usuario\Desktop\Api\ApiBancoDigital\Model\CorrenteModel.php(12): ApiBancoDigital\DAO\CorrenteDAO->save(Object(ApiBancoDigital\Model\CorrenteModel))
-#3 C:\Users\Usuario\Desktop\Api\ApiBancoDigital\Controller\CorrenteController.php(52): ApiBancoDigital\Model\CorrenteModel->save()
-#4 C:\Users\Usuario\Desktop\Api\ApiBancoDigital\rotas.php(11): ApiBancoDigital\Controller\CorrenteController::salvar()
-#5 C:\Users\Usuario\Desktop\Api\ApiBancoDigital\index.php(5): include('C:\\Users\\Usuari...')
-#6 C:\Users\Usuario\Desktop\Api\index.php(3): include('C:\\Users\\Usuari...')
-#7 {main}
+#0 C:\Users\Usuario\Desktop\ApiBancoDigital\ApiBancoDigital\DAO\ContaDAO.php(28): PDOStatement->execute()
+#1 C:\Users\Usuario\Desktop\ApiBancoDigital\ApiBancoDigital\Model\CorrenteModel.php(30): ApiBancoDigital\DAO\ContaDAO->insert(Object(ApiBancoDigital\Model\ContaModel))
+#2 C:\Users\Usuario\Desktop\ApiBancoDigital\ApiBancoDigital\Controller\CorrenteController.php(52): ApiBancoDigital\Model\CorrenteModel->save()
+#3 C:\Users\Usuario\Desktop\ApiBancoDigital\ApiBancoDigital\rotas.php(11): ApiBancoDigital\Controller\CorrenteController::salvar()
+#4 C:\Users\Usuario\Desktop\ApiBancoDigital\ApiBancoDigital\index.php(5): include('C:\\Users\\Usuari...')
+#5 C:\Users\Usuario\Desktop\ApiBancoDigital\index.php(3): include('C:\\Users\\Usuari...')
+#6 {main}

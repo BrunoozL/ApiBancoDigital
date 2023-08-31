@@ -42,10 +42,9 @@ class CorrenteModel extends Model
             $model_preenchido->rows_contas[] = $conta_poupanca;
         }
 
+        //var_dump($model_preenchido);
+
         return $model_preenchido;    
-
-
-        return (new CorrenteDAO())->save($this);     
     }
 
     public function getByCpfAndSenha($cpf, $senha) : CorrenteModel
