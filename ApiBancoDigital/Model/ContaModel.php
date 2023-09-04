@@ -5,7 +5,7 @@ use ApiBancoDigital\DAO\ContaDAO;
 
 class ContaModel extends Model
 {
-    public $id, $id_correntista, $tipo, $saldo, $limite;
+    public $id, $id_corrente, $tipo, $saldo, $limite;
     
     public function save()
     {
