@@ -17,7 +17,7 @@ class CorrenteController extends Controller
 
             $model = new CorrenteModel();
 
-            var_dump($model);
+            //var_dump($model);
             parent::GetResponseAsJSON($model->getByCpfAndSenha($data->cpf, $data->senha)); 
 
         } catch(Exception $e) {
